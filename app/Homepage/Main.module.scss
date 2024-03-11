@@ -1,0 +1,40 @@
+.preview {
+   &__video {
+      width: 100vw;
+      object-fit: cover;
+      max-height: 640px;
+   }
+}
+
+.description {
+   max-height: 530px;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   align-items: center;
+   margin: 50px 0 0 0;
+   &:first-child {
+      margin: 120px 0 0 0;
+   }
+   &__imgBody {
+      position: relative;
+      max-height: 530px;
+   }
+   &__titleBody {
+      position: relative;
+      z-index: 2;
+      padding: 40px;
+      color: #34364e;
+      margin: 0 0 0 -120px;
+      background: #f9f9f9;
+   }
+   &__title {
+      font-size: 30px;
+      margin: 0 0 15px 0;
+   }
+   &__subtitles {
+   }
+   &__subtitle {
+      margin: 0 0 30px 0;
+      line-height: 140%;
+   }
+}

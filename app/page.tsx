@@ -1,95 +1,59 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import styles from "./page.module.css";
+import Video from "./Homepage/Video";
+import Description from "./Homepage/Description";
+import description1 from "../public/img/description1.jpg";
+import description2 from "../public/img/description2.jpg";
+import Portfolio from "./Homepage/Portfolio";
+
+const description = [
+   {
+      imgOrder: 1,
+      titleOrder: 2,
+      margin: "0 0 0 -120px",
+      id: 0,
+      img: description1,
+      title: "Наше видение, миссия и ценности",
+      subtitle: [
+         "Обладая более чем 30-летним опытом работы в промышленности, мы занимаем первое место в мире по количеству поставляемых единиц продукции в сфере обработки воздуха.",
+         "В настоящее время Midea осуществляет многомиллионные инвестиции в развитие производства чиллеров. С 1999 года компания сфокусировалась на исследованиях и разработках и конкурирует за счет передовых технологий.",
+      ],
+   },
+   {
+      imgOrder: 2,
+      titleOrder: 1,
+      margin: "0 -120px 0 0",
+      id: 1,
+      img: description2,
+      title: "Ведущий производитель климатического оборудования",
+      subtitle: [
+         "Обладая более чем 30-летним опытом работы в промышленности, мы занимаем первое место в мире по количеству поставляемых единиц продукции в сфере обработки воздуха.",
+         "В настоящее время Midea осуществляет многомиллионные инвестиции в развитие производства чиллеров. С 1999 года компания сфокусировалась на исследованиях и разработках и конкурирует за счет передовых технологий.",
+      ],
+   },
+];
 
 export default function Home() {
-  return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+   return (
+      <>
+         <Video />
+         <div className={styles.homepage}>
+            <div className="container">
+               {description.map((el) => {
+                  return (
+                     <Description
+                        key={el.id}
+                        imgOrder={el.imgOrder}
+                        titleOrder={el.titleOrder}
+                        margin={el.margin}
+                        img={el.img}
+                        title={el.title}
+                        subtitle={el.subtitle}
+                     />
+                  );
+               })}
+               <Portfolio />
+            </div>
+         </div>
+      </>
+   );
 }
