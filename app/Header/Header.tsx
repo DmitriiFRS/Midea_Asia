@@ -6,22 +6,27 @@ const nav = [
    {
       name: "О компании",
       id: 0,
+      href: "/catalog",
    },
    {
       name: "Каталог продукции",
       id: 1,
+      href: "/catalog",
    },
    {
       name: "Выполненные проекты",
       id: 2,
+      href: "/catalog",
    },
    {
       name: "Контакты",
       id: 3,
+      href: "/catalog",
    },
    {
       name: "Медиафайлы",
       id: 4,
+      href: "/catalog",
    },
 ];
 
@@ -37,7 +42,7 @@ function Header() {
                   {nav.map((el) => {
                      return (
                         <li key={el.id} className={styles.header__navItem}>
-                           <Link className={styles.header__navLink} href={"#"}>
+                           <Link className={styles.header__navLink} href={el.href}>
                               {el.name}
                            </Link>
                         </li>
