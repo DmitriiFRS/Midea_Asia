@@ -1,0 +1,58 @@
+.footer {
+   margin: 60px 0 0 0;
+   background: #efefef;
+   &__container {
+      display: flex;
+      justify-content: space-between;
+      padding: 40px 0;
+   }
+   &__imgBody {
+      position: relative;
+      max-width: 100px;
+      aspect-ratio: 100/40;
+      width: 100%;
+      max-height: 40px;
+   }
+   &__nav {
+   }
+   &__navTitle {
+      font-size: 18px;
+      font-weight: 500;
+      color: #7d7e8c;
+   }
+   &__navList {
+      margin: 20px 0 0 0;
+   }
+   &__navLink {
+      margin: 0 0 10px 0;
+      color: #60616b;
+   }
+   &__contacts {
+   }
+   &__navTitle {
+   }
+   &__navBody {
+      display: flex;
+      margin: 20px 0 0 0;
+      color: #60616b;
+      align-items: center;
+      justify-content: center;
+   }
+   &__phone {
+      margin: 0 0 0 10px;
+   }
+   &__email {
+      margin: 0 0 0 10px;
+   }
+   &__iconsBody {
+      margin: 20px 0 0 0;
+      display: flex;
+   }
+   &__icon {
+      border: 1px solid #d7d7d7;
+      padding: 5px;
+      &:not(:last-child) {
+         margin: 0 18px 0 0;
+      }
+   }
+}

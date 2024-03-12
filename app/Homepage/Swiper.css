@@ -1,0 +1,29 @@
+.swiper-button-next {
+   height: 60px;
+   width: 60px;
+   background: #225560;
+   color: #fff;
+   position: absolute;
+   z-index: 2;
+   right: 5px;
+   top: 30%;
+   font-size: 60px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.swiper-button-prev {
+   height: 60px;
+   width: 60px;
+   background: #225560;
+   color: #fff;
+   position: absolute;
+   z-index: 2;
+   left: 0;
+   top: 30%;
+   transform: rotate(180deg);
+   font-size: 60px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
