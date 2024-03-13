@@ -1,3 +1,5 @@
+@import "../variables.scss";
+
 .preview {
    &__video {
       width: 100vw;
@@ -6,12 +8,102 @@
    }
 }
 
+.catalog {
+   margin: 180px 0 0 0;
+   position: relative;
+   &__bg {
+      position: absolute;
+      left: -50vw;
+      right: 0;
+      bottom: 0;
+      top: 60px;
+      width: 1000vw;
+      height: 100%;
+      background: #e4e4e4;
+   }
+   &__title {
+      text-align: center;
+      @include textTitle1;
+      margin: 0 0 60px 0;
+   }
+   &__body {
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
+      border-radius: 15px;
+   }
+   &__slide {
+      padding: 40px 20px;
+      display: flex;
+      gap: 40px;
+      color: inherit;
+      &:hover .catalog__moveTo > span {
+         width: 100%;
+      }
+   }
+   &__imgBody {
+      position: relative;
+      max-width: 400px;
+      width: 100%;
+      aspect-ratio: 3/2;
+   }
+   &__slideTitleBody {
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+   }
+   &__slideTitleBody > *:not(:last-child) {
+      margin: 0 0 30px 0;
+   }
+   &__slideTitle {
+      font-size: 24px;
+      font-weight: 600;
+      letter-spacing: 0.4px;
+      color: $grayColor;
+      text-align: center;
+   }
+   &__slideDescription {
+      font-size: 16px;
+      line-height: 130%;
+      color: $grayColor;
+      display: block;
+      flex: 1 1 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   }
+   &__moveTo {
+      font-size: 20px;
+      font-weight: 500;
+      letter-spacing: 0.6px;
+      text-align: center;
+      color: #34364e;
+      position: relative;
+      display: inline;
+      &::after {
+         content: url("../../public/icons/next.svg");
+         margin: 0 0 0 5px;
+      }
+      & span {
+         position: absolute;
+         left: 50%;
+         bottom: -5px;
+         height: 1px;
+         background: #9b9b9b;
+         max-width: 250px;
+         transform: translateX(-50%);
+         width: 0%;
+         transition: 0.5s;
+      }
+   }
+}
+
 .description {
    max-height: 530px;
    display: grid;
    grid-template-columns: 1fr 1fr;
    align-items: center;
-   margin: 50px 0 0 0;
+   margin: 150px 0 0 0;
    &:first-child {
       margin: 120px 0 0 0;
    }

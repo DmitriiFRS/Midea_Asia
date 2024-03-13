@@ -4,6 +4,7 @@ import Description from "./Homepage/Description";
 import description1 from "../public/img/description1.jpg";
 import description2 from "../public/img/description2.jpg";
 import Portfolio from "./Homepage/Portfolio";
+import Catalog from "./Homepage/Catalog";
 
 const description = [
    {
@@ -38,6 +39,7 @@ export default function Home() {
          <Video />
          <div className={styles.homepage}>
             <div className="container">
+               <Catalog />
                {description.map((el) => {
                   return (
                      <Description
