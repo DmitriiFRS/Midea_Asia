@@ -1,4 +1,4 @@
-import styles from "./page.module.css";
+import styles from "./page.module.scss";
 import Video from "./Homepage/Video";
 import Description from "./Homepage/Description";
 import description1 from "../public/img/description1.jpg";
