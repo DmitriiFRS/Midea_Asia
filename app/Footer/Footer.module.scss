@@ -1,6 +1,11 @@
 .footer {
-   margin: 60px 0 0 0;
-   background: #efefef;
+   position: relative;
+   z-index: 100;
+   padding: 120px 0 0 0;
+   background: #fff;
+   &__inner {
+      background: #efefef;
+   }
    &__container {
       display: flex;
       justify-content: space-between;
@@ -26,10 +31,6 @@
    &__navLink {
       margin: 0 0 10px 0;
       color: #60616b;
-   }
-   &__contacts {
-   }
-   &__navTitle {
    }
    &__navBody {
       display: flex;

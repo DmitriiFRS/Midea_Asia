@@ -40,19 +40,21 @@ export default function Home() {
          <div className={styles.homepage}>
             <div className="container">
                <Catalog />
-               {description.map((el) => {
-                  return (
-                     <Description
-                        key={el.id}
-                        imgOrder={el.imgOrder}
-                        titleOrder={el.titleOrder}
-                        margin={el.margin}
-                        img={el.img}
-                        title={el.title}
-                        subtitle={el.subtitle}
-                     />
-                  );
-               })}
+               <div className={styles.descriptionBody}>
+                  {description.map((el) => {
+                     return (
+                        <Description
+                           key={el.id}
+                           imgOrder={el.imgOrder}
+                           titleOrder={el.titleOrder}
+                           margin={el.margin}
+                           img={el.img}
+                           title={el.title}
+                           subtitle={el.subtitle}
+                        />
+                     );
+                  })}
+               </div>
                <Portfolio />
             </div>
          </div>

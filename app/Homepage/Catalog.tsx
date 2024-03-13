@@ -79,7 +79,7 @@ function Catalog() {
          >
             {slide.map((el, index) => {
                return (
-                  <SwiperSlide key={index}>
+                  <SwiperSlide className={styles.catalog__slideBody} key={index}>
                      <Link className={styles.catalog__slide} href={"/catalog"}>
                         <div className={styles.catalog__imgBody}>
                            <Image src={el.img} alt="оборудование" fill objectFit="contain" />
