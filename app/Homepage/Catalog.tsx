@@ -9,7 +9,7 @@ import VRF from "../../public/img/catalog/VRF.png";
 import rooftop from "../../public/img/catalog/rooftop.png";
 import chiller from "../../public/img/catalog/chiller.png";
 import multi from "../../public/img/catalog/multi.png";
-import { Autoplay } from "swiper/modules";
+import { Autoplay, EffectCreative } from "swiper/modules";
 import Link from "next/link";
 
 //const imges = [alba, semiIndustrial, VRF, atom, chiller, fancoil];
@@ -64,14 +64,23 @@ function Catalog() {
                delay: 3000,
                pauseOnMouseEnter: true,
             }}
-            modules={[Autoplay]}
+            modules={[Autoplay, EffectCreative]}
             loop={true}
             speed={1000}
+            effect="creative"
+            creativeEffect={{
+               prev: {
+                  translate: ["-120%", 0, -500],
+               },
+               next: {
+                  translate: ["120%", 0, -500],
+               },
+            }}
          >
             {slide.map((el, index) => {
                return (
                   <SwiperSlide key={index}>
-                     <Link className={styles.catalog__slide} href={"#"}>
+                     <Link className={styles.catalog__slide} href={"/catalog"}>
                         <div className={styles.catalog__imgBody}>
                            <Image src={el.img} alt="оборудование" fill objectFit="contain" />
                         </div>
