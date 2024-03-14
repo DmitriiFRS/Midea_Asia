@@ -1,0 +1,9 @@
+@import "../variables.scss";
+
+.contacts {
+   margin: 140px 0 0 0;
+   &__title {
+      text-align: center;
+      @include textTitle1;
+   }
+}

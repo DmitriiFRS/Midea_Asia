@@ -13,8 +13,8 @@ function Breadcrumbs() {
             let href = `/${pathNames.slice(0, index).join("/")}`;
             if (el === "catalog") titleRouter.push("Каталог");
             else if (el === "projects") titleRouter.push("Выполненные проекты");
+            else if (el === "contacts") titleRouter.push("Контакты");
             else if (el) titleRouter.push(el);
-            console.log(el);
             return (
                <div className={styles.bc__link} key={index}>
                   {titleRouter[index - 1] ? <span>/</span> : ""}
