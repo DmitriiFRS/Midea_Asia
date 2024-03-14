@@ -12,7 +12,6 @@ import multi from "../../public/img/catalog/multi.png";
 import { Autoplay, EffectCreative } from "swiper/modules";
 import Link from "next/link";
 
-//const imges = [alba, semiIndustrial, VRF, atom, chiller, fancoil];
 const slide = [
    {
       img: alba,
@@ -46,7 +45,7 @@ const slide = [
    },
    {
       img: rooftop,
-      title: "Чиллеры",
+      title: "Руфтопы",
       description:
          "Моноблочные системы кондиционирования, монтируемые на крыше здания и обеспечивающие охлаждение, нагрев и вентиляцию воздуха в больших помещениях",
    },

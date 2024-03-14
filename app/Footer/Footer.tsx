@@ -7,29 +7,7 @@ import { AiTwotoneMail } from "react-icons/ai";
 import { FaFacebookF } from "react-icons/fa";
 import { CiInstagram } from "react-icons/ci";
 import { FaTelegramPlane } from "react-icons/fa";
-
-const nav = [
-   {
-      name: "О компании",
-      id: 0,
-   },
-   {
-      name: "Каталог продукции",
-      id: 1,
-   },
-   {
-      name: "Выполненные проекты",
-      id: 2,
-   },
-   {
-      name: "Контакты",
-      id: 3,
-   },
-   {
-      name: "Медиафайлы",
-      id: 4,
-   },
-];
+import { nav } from "../Data/Data.nav";
 
 function Footer() {
    return (
@@ -44,7 +22,7 @@ function Footer() {
                   <ul className={styles.footer__navList}>
                      {nav.map((el) => {
                         return (
-                           <Link style={{ color: "inherit" }} key={el.id} href={"#"}>
+                           <Link style={{ color: "inherit" }} key={el.id} href={el.href}>
                               <li className={styles.footer__navLink}>{el.name}</li>
                            </Link>
                         );
