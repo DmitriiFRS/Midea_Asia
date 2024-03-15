@@ -17,10 +17,14 @@ function Form() {
                <input type="text" placeholder="E-mail" />
             </div>
             <div className={`${styles.contacts__inputBody} ${styles.contacts__inputBody5}`}>
-               <textarea name="" placeholder="Сообщение"></textarea>
+               <textarea name="message" placeholder="Сообщение"></textarea>
             </div>
          </div>
-         <button className={styles.contacts__inputAccept}>Отправить</button>
+         <div className={styles.contacts__inputAccept}>
+            <button className={styles.contacts__inputAcceptBtn}>
+               <span>Отправить</span>
+            </button>
+         </div>
       </form>
    );
 }
