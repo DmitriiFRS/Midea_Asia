@@ -14,7 +14,7 @@ function Footer() {
       <footer className={`footer ${styles.footer}`}>
          <div className={styles.footer__inner}>
             <div className={`${styles.footer__container} container`}>
-               <Link className={styles.footer__imgBody} href={"#"}>
+               <Link className={styles.footer__imgBody} href={"/"}>
                   <Image src={logo} alt="midea" fill />
                </Link>
                <nav className={styles.footer__nav}>

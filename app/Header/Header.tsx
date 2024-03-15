@@ -8,7 +8,7 @@ function Header() {
    return (
       <header className={`${styles.header} header`}>
          <div className={`${styles.header__container} container`}>
-            <Link href={"#"} className={styles.header__logo}>
+            <Link href={"/"} className={styles.header__logo}>
                <Image src={logo} alt="logo" fill />
             </Link>
             <nav className={styles.header__nav}>
