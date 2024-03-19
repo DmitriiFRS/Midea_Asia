@@ -22,7 +22,7 @@ const items = [
       id: 1,
       name: "Полупромышленные сплит-системы",
       img: semiIndustrial,
-      href: "/",
+      href: "/catalog/semi-industrial",
    },
    {
       id: 2,

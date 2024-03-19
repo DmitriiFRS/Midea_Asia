@@ -1,6 +1,5 @@
 import Breadcrumbs from "../Utilities/Breadcrumbs";
 import GridView from "./GridView";
-import Product from "./Product";
 import ProductBody from "./ProductBody";
 import styles from "./Reusable.module.scss";
 

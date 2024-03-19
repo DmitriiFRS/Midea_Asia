@@ -29,7 +29,7 @@
    }
 }
 .item {
-   padding: 30px 20px;
+   padding: 10px 20px;
    cursor: pointer;
    border-radius: 12px;
    background: #ebeaea;
@@ -54,7 +54,7 @@
       align-items: center;
       gap: 5px;
       & span {
-         color: #313131;
+         color: #858585;
          font-weight: 600;
          font-size: 16px;
       }
@@ -70,7 +70,7 @@
    }
    &__title {
       text-align: center;
-      margin: 30px 0 0 0;
+      margin: 20px 0 0 0;
       @include textStyle1;
    }
 }
