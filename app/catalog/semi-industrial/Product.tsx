@@ -1,15 +1,16 @@
 "use client";
 
-import styles from "./Reusable.module.scss";
+import styles from "../../Reusable/Reusable.module.scss";
 import Link from "next/link";
 import Image from "next/image";
 import { MdOutlineStarPurple500 } from "react-icons/md";
+import { useAppSelector } from "@/app/Hooks/ReduxHooks";
 
 type ElementType = {
    id: string;
    semiIndustrialGroup: {
       name: string;
-      type: boolean;
+      type: string[];
       image: {
          node: {
             sourceUrl: string;
@@ -20,10 +21,10 @@ type ElementType = {
 
 type Props = {
    element: ElementType;
-   isView: boolean;
 };
 
-function Product({ element, isView }: Props) {
+function Product({ element }: Props) {
+   const isView = useAppSelector((state) => state.ProductSlice.isLineView);
    return (
       <Link href={"#"} className={styles.item}>
          <div className={`${styles.item__imgBody} ${isView ? styles.item__imgBodyLine : ""}`}>

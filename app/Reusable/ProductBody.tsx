@@ -5,14 +5,8 @@ import { DataProps } from "./EquipList";
 import Product from "../catalog/air-conditioners/Product";
 import styles from "./Reusable.module.scss";
 
-function ProductBody({ data }: { data: DataProps }) {
+function ProductBody({ children }: { children: React.ReactNode }) {
    const isView = useAppSelector((state) => state.ProductSlice.isLineView);
-   return (
-      <div className={`${styles.equip__body} ${isView ? styles.equip__bodyLine : ""}`}>
-         {data.map((el) => {
-            return <Product key={el.id} element={el} isView={isView} />;
-         })}
-      </div>
-   );
+   return <div className={`${styles.equip__body} ${isView ? styles.equip__bodyLine : ""}`}>{children}</div>;
 }
 export default ProductBody;

@@ -18,16 +18,16 @@ export type DataInner = {
 
 export type DataProps = DataInner[];
 
-function EquipList({ data }: { data: DataProps }) {
+function EquipList({ children, title }: { children: React.ReactNode; title: string }) {
    return (
       <section className={styles.equip}>
          <div className="container">
             <Breadcrumbs />
             <div className={styles.equip__titleContainer}>
-               <h2 className={styles.equip__title}>Бытовые сплит-системы</h2>
+               <h2 className={styles.equip__title}>{title}</h2>
                <GridView />
             </div>
-            <ProductBody data={data} />
+            {children}
          </div>
       </section>
    );
