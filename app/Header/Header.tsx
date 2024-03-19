@@ -2,7 +2,7 @@ import styles from "./Header.module.scss";
 import Image from "next/image";
 import logo from "../../public/icons/MideaLogo.png";
 import Link from "next/link";
-import { nav } from "../Data/Data.nav";
+import { nav } from "../Data/Nav.data";
 
 function Header() {
    return (

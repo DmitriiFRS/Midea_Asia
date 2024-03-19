@@ -14,6 +14,7 @@ function Breadcrumbs() {
             if (el === "catalog") titleRouter.push("Каталог");
             else if (el === "projects") titleRouter.push("Выполненные проекты");
             else if (el === "contacts") titleRouter.push("Контакты");
+            else if (el === "air-conditioners") titleRouter.push("Бытовые сплит-системы");
             else if (el) titleRouter.push(el);
             return (
                <div className={styles.bc__link} key={index}>

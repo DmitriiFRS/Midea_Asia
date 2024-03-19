@@ -7,7 +7,7 @@ import { AiTwotoneMail } from "react-icons/ai";
 import { FaFacebookF } from "react-icons/fa";
 import { CiInstagram } from "react-icons/ci";
 import { FaTelegramPlane } from "react-icons/fa";
-import { nav } from "../Data/Data.nav";
+import { nav } from "../Data/Nav.data";
 
 function Footer() {
    return (

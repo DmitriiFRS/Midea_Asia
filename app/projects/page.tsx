@@ -1,4 +1,4 @@
-import { uzProjects, worldProjects } from "../Data/Data.projects";
+import { uzProjects, worldProjects } from "../Data/Projects.data";
 import Breadcrumbs from "../Utilities/Breadcrumbs";
 import Background from "./Background";
 import styles from "./Projects.module.scss";

@@ -16,46 +16,49 @@ const items = [
       id: 0,
       name: "Бытовые сплит-системы",
       img: alba,
+      href: "/catalog/air-conditioners",
    },
    {
       id: 1,
-      name: "Мультисплит-системы",
-      img: multi,
+      name: "Полупромышленные сплит-системы",
+      img: semiIndustrial,
+      href: "/",
    },
    {
       id: 2,
-      name: "Полупромышленные сплит-системы",
-      img: semiIndustrial,
+      name: "VRF-системы",
+      img: VRF,
+      href: "/",
    },
    {
       id: 3,
-      name: "VRF-системы",
-      img: VRF,
+      name: "Мини VRF-система серии ATOM",
+      img: atom,
+      href: "/",
    },
    {
       id: 4,
-      name: "Мини VRF-система серии ATOM",
-      img: atom,
+      name: "Чиллеры",
+      img: chiller,
+      href: "/",
    },
    {
       id: 5,
-      name: "Чиллеры",
-      img: chiller,
+      name: "Фанкойлы",
+      img: fancoil,
+      href: "/",
    },
    {
       id: 6,
-      name: "Фанкойлы",
-      img: fancoil,
+      name: "Компрессорно-конденсаторные блоки",
+      img: condensed,
+      href: "/",
    },
    {
       id: 7,
-      name: "Компрессорно-конденсаторные блоки",
-      img: condensed,
-   },
-   {
-      id: 8,
       name: "Руфтопы",
       img: rooftop,
+      href: "/",
    },
 ];
 
@@ -67,7 +70,7 @@ function Catalog() {
             <Breadcrumbs />
             <div className={styles.catalog__body}>
                {items.map((el) => {
-                  return <ItemCard key={el.id} img={el.img} name={el.name} />;
+                  return <ItemCard key={el.id} img={el.img} name={el.name} href={el.href} />;
                })}
             </div>
          </div>
