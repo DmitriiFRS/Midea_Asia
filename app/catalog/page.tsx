@@ -28,7 +28,7 @@ const items = [
       id: 2,
       name: "VRF-системы",
       img: VRF,
-      href: "/",
+      href: "/catalog/vrf",
    },
    {
       id: 3,
