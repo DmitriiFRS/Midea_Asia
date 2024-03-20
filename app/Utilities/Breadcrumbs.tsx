@@ -17,6 +17,8 @@ function Breadcrumbs() {
             else if (el === "air-conditioners") titleRouter.push("Бытовые сплит-системы");
             else if (el === "semi-industrial") titleRouter.push("Полупромышленные сплит-системы");
             else if (el === "vrf") titleRouter.push("VRF-Системы");
+            else if (el === "outer") titleRouter.push("Наружные блоки VRF");
+            else if (el === "mini") titleRouter.push("Наружные блоки VRF");
             else if (el) titleRouter.push(el);
             return (
                <div className={styles.bc__link} key={index}>

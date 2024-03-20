@@ -10,11 +10,13 @@ const data = [
       id: 0,
       title: "Наружные блоки VRF-системы",
       img: module,
+      href: "/catalog/vrf/outer",
    },
    {
       id: 1,
       title: "Мини VRF",
       img: mini,
+      href: "/catalog/vrf/mini",
    },
 ];
 
@@ -27,7 +29,7 @@ function Vrf() {
             <div className={styles.vrf__body}>
                {data.map((el) => {
                   return (
-                     <Link href={"#"} key={el.id} className={styles.vrf__item}>
+                     <Link href={el.href} key={el.id} className={styles.vrf__item}>
                         <div className={styles.vrf__imgBody}>
                            <Image src={el.img} alt={el.title} fill objectFit="contain" />
                         </div>

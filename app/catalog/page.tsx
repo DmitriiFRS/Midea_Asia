@@ -31,12 +31,6 @@ const items = [
       href: "/catalog/vrf",
    },
    {
-      id: 3,
-      name: "Мини VRF-система серии ATOM",
-      img: atom,
-      href: "/",
-   },
-   {
       id: 4,
       name: "Чиллеры",
       img: chiller,
