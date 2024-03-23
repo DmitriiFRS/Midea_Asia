@@ -3,11 +3,12 @@ import EquipList from "../../Reusable/EquipList";
 import ProductBody from "@/app/Reusable/ProductBody";
 import Product from "./Product";
 
-type DataInner = {
+export type DataInner = {
    id: string;
    airCondGroup: {
       name: string;
       popular: boolean;
+      url: string;
       image: {
          node: {
             sourceUrl: string;
@@ -35,6 +36,7 @@ async function AirCond() {
           airCondGroup {
             name
             popular
+            url
             image {
               node {
                 sourceUrl

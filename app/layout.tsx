@@ -8,7 +8,7 @@ import { StoreProvider } from "./Redux/StoreProvider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-   title: "Midea",
+   title: "Climate solution",
    description: "Midea asia",
 };
 

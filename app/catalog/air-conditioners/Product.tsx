@@ -5,28 +5,16 @@ import Link from "next/link";
 import Image from "next/image";
 import { MdOutlineStarPurple500 } from "react-icons/md";
 import { useAppSelector } from "@/app/Hooks/ReduxHooks";
-
-type ElementType = {
-   id: string;
-   airCondGroup: {
-      name: string;
-      popular: boolean;
-      image: {
-         node: {
-            sourceUrl: string;
-         };
-      };
-   };
-};
+import { DataInner } from "./page";
 
 type Props = {
-   element: ElementType;
+   element: DataInner;
 };
 
 function Product({ element }: Props) {
    const isView = useAppSelector((state) => state.ProductSlice.isLineView);
    return (
-      <Link href={"#"} className={styles.item}>
+      <Link href={`/catalog/air-conditioners/${element.airCondGroup.url}`} className={styles.item}>
          {element.airCondGroup.popular ? (
             <div className={styles.item__popular}>
                <MdOutlineStarPurple500 size={25} />
