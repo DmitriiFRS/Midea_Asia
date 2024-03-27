@@ -5,6 +5,7 @@ import description1 from "../public/img/description1.jpg";
 import description2 from "../public/img/description2.jpg";
 import Portfolio from "./Homepage/Portfolio";
 import Catalog from "./Homepage/Catalog";
+import MostPopular from "./Homepage/MostPopular";
 
 const description = [
    {
@@ -38,25 +39,9 @@ export default function Home() {
       <>
          <Video />
          <div className={styles.homepage}>
-            <div className="container">
-               <Catalog />
-               <div className={styles.descriptionBody}>
-                  {description.map((el) => {
-                     return (
-                        <Description
-                           key={el.id}
-                           imgOrder={el.imgOrder}
-                           titleOrder={el.titleOrder}
-                           margin={el.margin}
-                           img={el.img}
-                           title={el.title}
-                           subtitle={el.subtitle}
-                        />
-                     );
-                  })}
-               </div>
-               <Portfolio />
-            </div>
+            <Catalog />
+            <MostPopular />
+            <Portfolio />
          </div>
       </>
    );

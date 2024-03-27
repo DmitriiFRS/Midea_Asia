@@ -38,32 +38,34 @@ function Portfolio() {
    return (
       <section className={`${styles.portfolio} swip`}>
          <div className={styles.portfolio__bg}></div>
-         <h2 className={styles.portfolio__title}>Портфолио работ</h2>
-         <Swiper
-            className={styles.portfolio__swiper}
-            spaceBetween={50}
-            slidesPerView={3}
-            navigation={{
-               nextEl: ".swiper-button-next",
-               prevEl: ".swiper-button-prev",
-            }}
-            modules={[Navigation]}
-            grabCursor
-         >
-            <button className="swiper-button-next">
-               <MdNavigateNext />
-            </button>
-            <button className="swiper-button-prev">
-               <MdNavigateNext />
-            </button>
-            {sliderData.map((el, index) => {
-               return (
-                  <SwiperSlide key={index}>
-                     <SlideContent img={el.img} title={el.title} subtitle={el.subtitle} />
-                  </SwiperSlide>
-               );
-            })}
-         </Swiper>
+         <div className="container">
+            <h2 className={styles.portfolio__title}>Портфолио работ</h2>
+            <Swiper
+               className={styles.portfolio__swiper}
+               spaceBetween={50}
+               slidesPerView={3}
+               navigation={{
+                  nextEl: ".swiper-button-next",
+                  prevEl: ".swiper-button-prev",
+               }}
+               modules={[Navigation]}
+               grabCursor
+            >
+               <button className="swiper-button-next">
+                  <MdNavigateNext />
+               </button>
+               <button className="swiper-button-prev">
+                  <MdNavigateNext />
+               </button>
+               {sliderData.map((el, index) => {
+                  return (
+                     <SwiperSlide key={index}>
+                        <SlideContent img={el.img} title={el.title} subtitle={el.subtitle} />
+                     </SwiperSlide>
+                  );
+               })}
+            </Swiper>
+         </div>
       </section>
    );
 }

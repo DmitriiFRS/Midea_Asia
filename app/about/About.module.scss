@@ -1,0 +1,17 @@
+@import "../variables.scss";
+
+.about {
+   background: #ffffff;
+   &__bgTopBody {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100vw;
+      height: 740px;
+   }
+   &__container {
+      margin: $marginContainer;
+      position: relative;
+      z-index: 2;
+   }
+}
