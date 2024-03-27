@@ -3,15 +3,21 @@ import styles from "./Main.module.scss";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import image1 from "../../public/img/v8.webp";
-import image2 from "../../public/img/v8_2.webp";
-import image3 from "../../public/img/v8_3.webp";
+import image1 from "../../public/img/homepage/slide1.jpg";
+import image2 from "../../public/img/homepage/slide2.jpg";
+import image3 from "../../public/img/homepage/slide3.jpg";
+import image4 from "../../public/img/homepage/slide4.jpg";
+import image5 from "../../public/img/homepage/slide5.jpg";
+import image6 from "../../public/img/homepage/slide6.jpg";
+import image7 from "../../public/img/homepage/slide7.jpg";
+import image8 from "../../public/img/homepage/slide8.jpg";
+import image9 from "../../public/img/homepage/slide9.jpg";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { MdNavigateNext } from "react-icons/md";
 import Image from "next/image";
 import "./Swiper.css";
 
-const sliderData = [image1, image2, image3];
+const sliderData = [image1, image2, image3, image4, image5, image6, image7, image8, image9];
 
 function MostPopular() {
    return (
