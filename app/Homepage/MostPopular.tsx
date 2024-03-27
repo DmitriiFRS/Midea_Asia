@@ -51,7 +51,7 @@ function MostPopular() {
                return (
                   <SwiperSlide key={index}>
                      <div className={styles.popular__imgBody}>
-                        <Image src={el} alt="оборудование" fill style={{ objectFit: "contain" }} />
+                        <Image src={el} alt="оборудование" fill />
                      </div>
                   </SwiperSlide>
                );
